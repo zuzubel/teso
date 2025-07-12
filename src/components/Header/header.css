@@ -1,0 +1,129 @@
+/* Company Header */
+.company-header {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.15);
+  color: var(--white);
+  padding: 0.5rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  box-shadow: none;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 0 1.5rem;
+  flex-wrap: nowrap;
+}
+
+.company-name {
+  gap: 0.25rem;
+  margin-right: 1.5rem;
+  flex: 0 0 auto;
+  width: fit-content;
+}
+
+.company-name h1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgb(253, 185, 19);
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.company-name h1::after {
+  display: none;
+}
+
+.company-subtitle {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--white);
+  letter-spacing: 0.1em;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.logo-link:hover {
+  color: inherit;
+}
+
+.logo-subtitle {
+  font-size: 0.7rem;
+  font-weight: normal;
+  margin-top: 0.1rem;
+  opacity: 0.8;
+}
+
+.phone-number {
+  color: var(--white);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.2rem 0.6rem;
+  white-space: nowrap;
+  margin-left: 1.5rem;
+  flex: 0 0 auto;
+  width: fit-content;
+}
+
+.phone-number:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  color: rgb(253, 185, 19);
+}
+
+/* Update tablet breakpoint for header */
+@media (min-width: 768px) {
+  .company-header {
+    padding: 0.75rem;
+  }
+
+  .company-name h1 {
+    font-size: 2rem;
+  }
+
+  .company-name h1::after {
+    width: 80px;
+    height: 4px;
+  }
+
+  .company-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+/* Update desktop breakpoint for header */
+@media (min-width: 1024px) {
+  .company-header {
+    padding: 1rem;
+  }
+
+  .company-name h1 {
+    font-size: 2.5rem;
+  }
+
+  .company-name h1::after {
+    width: 100px;
+  }
+
+  .company-subtitle {
+    font-size: 1.2rem;
+  }
+}

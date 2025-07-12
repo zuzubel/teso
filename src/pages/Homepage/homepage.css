@@ -1,0 +1,241 @@
+/* Uvodni Stranka specific styles */
+.uvodni-stranka-container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 200px);
+  background-image: url('/digger.jpg');
+  background-size: cover;
+  background-position: center -100px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.uvodni-stranka-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.uvodni-stranka {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: var(--white);
+  text-align: left;
+  padding: 2rem 4rem;
+  z-index: 2;
+}
+
+.uvodni-stranka-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  margin: 0 0 0 4rem;
+  text-align: left;
+}
+
+.uvodni-stranka h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+  text-align: left;
+}
+
+.uvodni-stranka p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: var(--white);
+  text-align: left;
+}
+
+.services-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.services-section h2 {
+  text-align: center;
+  color: var(--white);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.service-item {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(253, 185, 19, 0.1);
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  border-color: rgba(253, 185, 19, 0.3);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: rgb(253, 185, 19);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-item h3 {
+  color: rgb(253, 185, 19);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.service-item h3::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: rgb(253, 185, 19);
+  transition: width 0.3s ease;
+}
+
+.service-item:hover h3::after {
+  width: 100%;
+}
+
+.service-item p {
+  color: var(--white);
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.service-list li {
+  color: var(--white);
+  opacity: 0.9;
+  line-height: 1.6;
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.75rem;
+  transition: all 0.3s ease;
+  flex: 0 0 auto;
+}
+
+.service-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 6px;
+  height: 6px;
+  background-color: rgb(253, 185, 19);
+  border-radius: 50%;
+}
+
+.service-button {
+  display: inline-block;
+  margin-top: auto;
+  padding: 0.75rem 2rem;
+  background: transparent;
+  color: rgb(253, 185, 19);
+  border: 2px solid rgb(253, 185, 19);
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.service-button:hover {
+  background: rgb(253, 185, 19);
+  color: black;
+  transform: translateY(-2px);
+}
+
+/* Update mobile styles */
+@media (max-width: 767px) {
+  .uvodni-stranka {
+    padding: 2rem;
+    justify-content: center;
+    min-height: 50vh;
+  }
+
+  .uvodni-stranka-content {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .uvodni-stranka h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .uvodni-stranka p {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .uvodni-stranka {
+    padding: 2rem;
+    justify-content: center;
+    min-height: 50vh;
+  }
+
+  .services-section {
+    padding: 3rem 1rem;
+  }
+
+  .services-section h2 {
+    font-size: 2rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .service-item {
+    padding: 1.5rem;
+  }
+}

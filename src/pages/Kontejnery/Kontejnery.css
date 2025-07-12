@@ -1,0 +1,8 @@
+/* Kontejnery page specific styles only */
+/* All shared styles are now in index.css */
+
+/* Page-specific container adjustments if needed */
+.page-container {
+  margin-top: 80px;
+  min-height: calc(100vh - 80px);
+}
