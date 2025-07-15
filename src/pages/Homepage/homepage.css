@@ -3,23 +3,7 @@
   display: flex;
   flex-direction: column;
   min-height: calc(100vh - 200px);
-  background-image: url('/digger.jpg');
-  background-size: cover;
-  background-position: center -100px;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   position: relative;
-}
-
-.uvodni-stranka-container::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
 }
 
 .uvodni-stranka {
@@ -31,12 +15,10 @@
   color: var(--white);
   text-align: left;
   padding: 2rem 4rem;
-  z-index: 2;
 }
 
 .uvodni-stranka-content {
   position: relative;
-  z-index: 2;
   max-width: 600px;
   margin: 0 0 0 4rem;
   text-align: left;
@@ -63,7 +45,6 @@
   margin: 0 auto;
   padding: 4rem 2rem;
   position: relative;
-  z-index: 2;
 }
 
 .services-section h2 {
@@ -81,14 +62,12 @@
 }
 
 .service-item {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: #2a2a2a;
   border-radius: 1rem;
   padding: 2rem;
   text-align: center;
   transition: all 0.3s ease;
-  border: 1px solid rgba(253, 185, 19, 0.1);
+  border: 1px solid #333;
   display: flex;
   flex-direction: column;
   min-height: 400px;
