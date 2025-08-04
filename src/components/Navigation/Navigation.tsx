@@ -9,14 +9,18 @@ export function Navigation() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const handleClickOutside = () => {
-    if (isMobileMenuOpen) {
+  const handleClickOutside = (event: MouseEvent) => {
+    const target = event.target as Element;
+    if (isMobileMenuOpen && !target.closest('.nav-container')) {
       setIsMobileMenuOpen(false);
     }
   };
 
   useEffect(() => {
     document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
   }, [isMobileMenuOpen]);
 
   const menuItems = [
@@ -34,6 +38,7 @@ export function Navigation() {
           onClick={toggleMobileMenu}
           aria-label="Hamburger menu"
         >
+          <span className="hamburger-menu__line"></span>
           <span className="hamburger-menu__line"></span>
           <span className="hamburger-menu__line"></span>
         </button>

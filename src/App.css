@@ -28,11 +28,9 @@
 }
 
 .service-description>p {
-  margin-top: 2rem;
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--secondary-color);
-  margin-bottom: 1rem;
 }
 
 .service-description ul {
